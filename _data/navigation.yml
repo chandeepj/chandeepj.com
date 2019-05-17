@@ -1,0 +1,19 @@
+# Pages Under Construction
+# - title: Blog
+#   url: /blog/
+# - title: About
+#   url: /about/
+# - title: Contact
+#   url: /contact/
+
+
+# dropdown menu example format
+# - title: Sub Menu
+#   url: /dropdown/
+#   sublinks:
+#     - title: Sub Item 1
+#       url: /dropdown/1
+#     - title: Sub Item 2
+#       url: /dropdown/2
+#     - title: Sub Item 3
+#       url: /dropdown/3

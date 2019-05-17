@@ -1,0 +1,79 @@
+// Label base style
+@mixin label-base() {
+    border-radius: .1rem;
+    line-height: 1.25;
+    padding: .1rem .2rem;
+}
+  
+@mixin label-variant($color: $white, $bg-color: $color-primary) {
+    background: $bg-color;
+    color: $color;
+}
+
+@mixin overlay($offset: 0) {
+    bottom: $offset;
+    left: $offset;
+    position: absolute;
+    right: $offset;
+    top: $offset;
+}
+
+@mixin background-opacity($color, $opacity: 0.3) {
+    background: $color; /* The Fallback */
+    background: rgba($color, $opacity);
+}
+
+// Responsiveness
+@mixin from($device) { 
+    @media screen and (min-width: $device) {
+        @content;
+    }
+}
+@mixin until($device) { 
+    @media screen and (max-width: $device - 1px) {
+        @content;
+    }
+}
+
+// internal function, meant only to be used on css framework
+@mixin _screen( $breakpoint ) { 
+    $width: map-get( $breakpoints, $breakpoint );
+    @if $width != 0 {
+        @if $breakpoint == 'mobile' {
+            @media screen and ( max-width: $width ) {
+                @content;
+            } 
+        } @else if $breakpoint == 'tablet' {
+            @media screen and ( min-width: $width ), print {
+                @content;
+            } 
+        } @else {
+            @media screen and ( min-width: $width ) {
+                @content;
+            } 
+        }
+    } @else {
+        @content;
+    }
+}
+
+@mixin mobile { 
+    @media screen and (max-width: map-get($breakpoints, mobile) ) {
+        @content;
+    }
+}
+@mixin tablet { 
+    @media screen and (min-width: map-get($breakpoints, tablet) ), print {
+        @content;
+    }
+}
+@mixin desktop { 
+    @media screen and (min-width: map-get($breakpoints, desktop) ) {
+        @content;
+    }
+}
+@mixin widescreen { 
+    @media screen and (min-width: map-get($breakpoints, widescreen) ) {
+        @content;
+    }
+}

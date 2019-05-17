@@ -1,0 +1,75 @@
+
+.u-rounded {
+    border-radius: 50%;
+}
+
+.u-full-width {
+    width: 100%;
+}
+
+// Flex box 
+@each $breakpoint in map-keys($breakpoints) {
+	$infix: breakpoint-infix($breakpoint, $breakpoints);
+	@include _screen( $breakpoint ) {
+		// // flex box 
+		.d#{$infix}-flex { display: flex; }
+		.d#{$infix}-flex-inline { display: inline-flex; }
+		// .d#{$infix}-flex-none { flex: none; }
+
+		// // flex direction
+		// .flex#{$infix}-row { flex-direction: row; }
+		// .flex#{$infix}-row-reverse { flex-direction: row-reverse; }
+		.flex#{$infix}-column { flex-direction: column; }
+		// .flex#{$infix}-column-reverse { flex-direction: column-reverse; }
+
+		// // flex wrap
+		// .flex#{$infix}-nowrap { flex-wrap: nowrap; }
+		.flex#{$infix}-wrap { flex-wrap: wrap; }
+		// .flex#{$infix}-wrap-reverse { flex-wrap: wrap-reverse; }
+
+		// // flex justify content
+		// .justify-content#{$infix}-start   { justify-content: flex-start; }
+		// .justify-content#{$infix}-end     { justify-content: flex-end; }
+		.justify-content#{$infix}-center  { justify-content: center; }
+		.justify-content#{$infix}-between { justify-content: space-between; }
+		// .justify-content#{$infix}-around  { justify-content: space-around; }
+
+		// // flex align items
+		// .align-items#{$infix}-start    { align-items: flex-start; }
+		// .align-items#{$infix}-end      { align-items: flex-end; }
+		.align-items#{$infix}-center   { align-items: center; }
+		// .align-items#{$infix}-baseline { align-items: baseline; }
+		// .align-items#{$infix}-stretch  { align-items: stretch; }
+
+		// // flex align self
+		// .align-self#{$infix}-start    { align-self: flex-start; }
+		// .align-self#{$infix}-end      { align-self: flex-end; }
+		.align-self#{$infix}-center   { align-self: center; }
+		// .align-self#{$infix}-baseline { align-self: baseline; }
+		// .align-self#{$infix}-stretch  { align-self: stretch; }
+ 
+		// // flex auto
+		// .flex#{$infix}-auto {
+		// 	/* 1. Fix for Chrome 44 bug.
+		// 	https://code.google.com/p/chromium/issues/detail?id=506893 */
+		// 	flex: 1 1 auto;
+		// 	min-width: 0; /* 1 */
+		// 	min-height: 0; /* 1 */
+		// }
+
+		// // flex align content
+		// .align-content#{$infix}-start   { align-content: flex-start; }
+		// .align-content#{$infix}-end     { align-content: flex-end; }
+		// .align-content#{$infix}-center  { align-content: center; }
+		// .align-content#{$infix}-between { align-content: space-between; }
+		// .align-content#{$infix}-around  { align-content: space-around; }
+		// .align-content#{$infix}-stretch { align-content: stretch; }
+
+		// // flex order
+		// .order#{$infix}-first { order: -1; }
+		// @for $i from 1 through 12 {
+		// 	.order#{$infix}-#{$i} { order: #{$i}; }
+		// }
+		// .order#{$infix}-last { order: 99999; }
+	}
+}

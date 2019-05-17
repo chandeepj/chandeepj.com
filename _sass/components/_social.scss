@@ -1,0 +1,11 @@
+.c-social {
+    &__link {
+        padding: 0 10px 15px;
+        color: $black;
+    }
+    &__text {
+        overflow: hidden;
+        position: absolute !important;
+        width: 1px;
+    }
+}

@@ -1,0 +1,107 @@
+$html--font-size: $font__size_base !default;
+
+$body--font-family: $font__body !default;
+$body--font-size: 1rem !default;
+$body--font-weight: 400 !default;
+$body--line-height: $font__line-height-body !default;
+
+$heading--font-family: $font__heading !default;
+$heading--color: $gray-8 !default;
+$heading--font-weight: 700 !default;
+$heading--letter-spacing: -0.02em !default;
+$heading--line-height: $font__line-height-heading !default;
+
+$p--margin: 0 0 $size__space-md !default;
+
+$kbd--color: $white !default;
+$kbd--background: $black !default;
+$code--color: $color-error--dark !default;
+$code--background: $color-error--lightest !default;
+$code--font-family: $font__code !default;
+$pre--font-size: $font__size-sm !default;
+$pre--font-family: $font__pre !default;
+$pre--line-height: $font__line-height-body !default;
+$mark--background: mix($body--background, $color-primary, 75%) !default;
+
+html {
+  font-size: $html--font-size;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: $body--font-family;
+  font-weight: $body--font-weight;
+  font-size: $body--font-size;
+  line-height: $body--line-height;
+  text-rendering: optimizeLegibility;
+}
+
+// Headings
+h1, h2, h3, h4, h5, h6 {
+  color: $heading--color;
+  font-family: $heading--font-family;
+  font-weight: $heading--font-weight;
+  letter-spacing: $heading--letter-spacing;
+  line-height: $heading--line-height;
+}
+
+h1 { font-size: $font__size-xxl; }
+h2 { font-size: $font__size-xl; }
+h3 { font-size: $font__size-lg; }
+h4 { font-size: $font__size-md; }
+h5 { font-size: $font__size-sm; }
+h6 { font-size: $font__size-xs; }
+
+// Paragraphs
+p { margin: $p--margin; }
+
+// Semantic text elements
+big {
+  font-size: 125%;
+}
+dfn,
+cite,
+em,
+i {
+  font-style: italic;
+}
+abbr,
+acronym {
+  border-bottom: 1px dotted;
+  cursor: help;
+  text-decoration: none;
+}
+code,
+kbd,
+tt,
+var {
+  font-family: $code--font-family;
+}
+pre {
+  font-size: $pre--font-size;
+  font-family: $pre--font-family;
+  line-height: $pre--line-height;
+  overflow: auto;
+}
+kbd {
+  background: $kbd--background;
+  color: $kbd--color;
+}
+code {
+  background: $code--background;
+  color: $code--color;
+}
+code,
+kbd {
+  border-radius: 0.2rem;
+  line-height: 1.25;
+  padding: 0.1rem 0.2rem;
+  font-size: 75%;
+}
+mark {
+  background: $mark--background;
+  border-bottom: 0.05rem solid darken($mark--background, 15%);
+  border-radius: 0.1rem;
+  padding: 0.05rem 0.1rem 0;
+}

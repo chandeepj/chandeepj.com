@@ -1,0 +1,67 @@
+$list--padding: 0 0 0 $size__space-md !default;
+$list--line-height: $font__line-height-body !default;
+$dd--margin: 0 $size__space-md $size__space-md !default;
+
+$blockquote--border-left: 2px solid $gray-2 !default;
+$blockquote--margin: 0 !default;
+$blockquote--padding: 0 0 0 $size__space-md !default;
+
+$blockquote__p--margin: 0 0 $size__space-md !default;
+
+$blockquote__cite--color: $gray-6 !default;
+$blockquote__cite--font-family: $font__heading !default;
+$blockquote__cite--font-size: $font__size-xs !default;
+
+// Lists
+ul {
+  list-style: disc;
+
+  ul {
+    list-style-type: circle;
+  }
+}
+
+ul,
+ol,
+li > ul,
+li > ol {
+  padding: $list--padding;
+}
+
+ol { list-style: decimal; }
+li { line-height: $list--line-height; }
+dt { font-weight: bold; }
+dd { margin: $dd--margin; }
+
+// Blockquote
+blockquote {
+  border-left: $blockquote--border-left;
+  margin: $blockquote--margin;
+  padding: $blockquote--padding;
+
+  > p {
+    margin: $blockquote__p--margin;
+  }
+
+  cite {
+    color: $blockquote__cite--color;
+    font-size: $blockquote__cite--font-size;
+    font-family: $blockquote__cite--font-family;
+  }
+}
+
+// Tables
+table {
+  margin: 0 0 $size__space-md;
+  border-collapse: collapse;
+  width: 100%;
+
+  td,
+  th {
+      padding: .5em .75em;
+  }
+
+  th { 
+      text-align: left;
+  }
+}

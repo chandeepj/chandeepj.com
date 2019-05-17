@@ -15,20 +15,32 @@
 # in the templates via {{ site.myvariable }}.
 title: Chandeep J
 email: chandeepsj@gmail.com
-description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+description: >- # this means to ignore newlines until "baseurl:" Thoughts, Code & Life.
+  Entrepreneur, Web Designer and Developer
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://chandeepj.com" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: chandeepsj
 github_username:  chandeepj
 
+collections:
+  posts:
+    output: true
+    permalink: /blog/:title/
+
+jekyll-mentions:
+  base_url: https://twitter.com
+
 # Build settings
 markdown: kramdown
-theme: minima
+# theme: minima
+
 plugins:
   - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-avatar
+  - jemoji
+  - jekyll-mentions
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list

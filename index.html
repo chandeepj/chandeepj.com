@@ -1,0 +1,29 @@
+---
+
+---
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: 'en' }}">
+
+  {%- include head.html -%}
+
+  <body>
+
+    <div class="wrap">
+    	<div class="home d-flex flex-column justify-content-center align-items-center">
+				<div class="home-avatar d-flex-inline u-rounded">
+					{%- avatar chandeepj size=150 -%}
+				</div>
+				<h3 class="home-name">{{ site.title }}</h3>
+				<div class="home-desc">{{ site.description }}</div>
+				<div class="o-list o-list--horizontal c-social">
+					{%- include social.html -%}
+				</div>
+				<nav class="o-list o-list--horizontal c-nav c-nav--main">
+					{%- include nav.html -%}
+				</nav>
+      </div>
+    </div>
+		{%- include footer.html -%}
+  </body>
+
+</html>

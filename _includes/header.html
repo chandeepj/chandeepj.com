@@ -1,0 +1,11 @@
+<header class="header d-flex align-items-center" role="banner">
+
+  <div class="wrap d-flex align-items-center justify-content-between u-full-width">
+    {%- assign default_paths = site.pages | map: "path" -%}
+    <a class="site-title" rel="author" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
+
+    <nav class="o-list o-list--horizontal c-nav c-nav--main">
+      {%- include nav.html -%}
+    </nav>
+  </div>
+</header>

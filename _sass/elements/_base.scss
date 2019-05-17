@@ -1,0 +1,60 @@
+$body--background: $white !default;
+$body--color: $gray-8 !default;
+
+$a--color: $color-primary !default;
+$a--hover--color: $color-primary--dark !default;
+$a--transition: all 110ms ease-in-out !default;
+
+$hr--background: $gray-6 !default;
+$hr--height: 2px !default;
+
+$selection--background: mix($body--background, $color-primary, 75%) !default;
+
+// -----
+// Base
+// -----
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+::selection {
+  background-color: $selection--background;
+}
+
+html {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  background: $body--background;
+  color: $body--color;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+a {
+  color: $a--color;
+  outline: none;
+  text-decoration: none;
+  transition: $a--transition;
+
+  &:focus,
+  &:hover,
+  &:visited,
+  &:active,
+  &.active {
+    color: $a--hover--color;
+    outline: none;
+    text-decoration: none;
+  }
+}
+
+hr {
+  background-color: $hr--background;
+  border: 0;
+  height: $hr--height;
+}

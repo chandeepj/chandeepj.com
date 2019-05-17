@@ -1,0 +1,46 @@
+.o-list {
+    $self: &;
+  
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  
+    &__sub-list {
+      list-style: none;
+    }
+  
+    &--horizontal {
+      display: flex;
+      flex-wrap: wrap;
+  
+      #{$self}__sub-list {
+        display: none;
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        z-index: 99999;
+      }
+  
+      #{$self}__item--hover > #{$self}__sub-list,
+      &:not(#{$self}--js-hover) #{$self}__item:hover > #{$self}__sub-list {
+        display: flex;
+        flex-wrap: wrap;
+      }
+    }
+  
+    &--dropdown {
+  
+      #{$self}__sub-list {
+        flex-direction: column;
+      }
+  
+      #{$self}__item--hover > #{$self}__sub-list,
+      &:not(#{$self}--js-hover) #{$self}__item:hover > #{$self}__sub-list {
+        display: block;
+      }
+    }
+  
+    &--no-sub-list #{$self}__sub-list {
+      display: none !important;
+    }
+  }

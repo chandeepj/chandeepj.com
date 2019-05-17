@@ -1,0 +1,10 @@
+{% for social_media in site.data.social %}
+	{% if social_media.url %}
+		<div class="o-list__item">
+			<a href="{{ social_media.url }}" class="c-social__link">
+				<i class="{{ social_media.icon }}"></i>
+				<span class="c-social__text">{{ social_media.text }}</span>
+			</a>
+		</div>
+	{% endif %}
+{% endfor %}
